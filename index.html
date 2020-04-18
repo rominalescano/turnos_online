@@ -183,7 +183,7 @@
     <div class="col-12 col-lg-8 m-auto">
       <form class="multisteps-form__form">
         <!--1 single form panel-->
-        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+        <div class="multisteps-form__panel p-4 rounded bg-white js-active" data-animation="scaleIn">
           <h3 class="multisteps-form__title"></h3>
           <div class="multisteps-form__content">
 
@@ -212,7 +212,7 @@
       <!-- ----- -->
 
         <!--2 single form panel-->
-        <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+        <div class="multisteps-form__panel p-4 rounded bg-white" data-animation="scaleIn">
           <h3 class="multisteps-form__title"></h3>
           <div class="multisteps-form__content">
              <!-- MI SEGUNDA SECTION -->
@@ -240,7 +240,7 @@
          <!-- ----- -->
 
         <!--3 single form panel-->
-        <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+        <div class="multisteps-form__panel p-4 rounded bg-white" data-animation="scaleIn">
           <h3 class="multisteps-form__title"></h3>
           <div class="multisteps-form__content">
             <!-- MI TERCERA SECTION -->
@@ -336,7 +336,7 @@
 
 
         <!--4single form panel-->
-          <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+          <div class="multisteps-form__panel p-4 rounded bg-white" data-animation="scaleIn">
           <h3 class="multisteps-form__title"></h3>
           <div class="multisteps-form__content">
                  <!-- MI CUARTA SECTION -->
@@ -392,7 +392,7 @@
          <!-- ----- -->
 
          <!--5single form panel-->
-        <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+        <div class="multisteps-form__panel p-4 rounded bg-white" data-animation="scaleIn">
           <h3 class="multisteps-form__title"></h3>
           <div class="multisteps-form__content">
               <!-- MI QUINTA SECTION -->
@@ -490,6 +490,7 @@
                                 </div>   
                         </div>
 <!--fin de modal -->
+
 <script>
   //DOM elements
 const DOMstrings = {
@@ -641,10 +642,14 @@ DOMstrings.stepsForm.addEventListener('click', e => {
   //set active step and active panel onclick
   if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
     activePanelNum--;
+    window.scrollTo(0, 0);
+    window.scrollTop = 0;
 
   } else {
 
     activePanelNum++;
+    window.scrollTo(0, 0);
+    window.scrollTop = 0;
 
   }
 
