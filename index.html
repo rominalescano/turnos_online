@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/jquery.steps.css">
+
+
   <script src="./assets/js/jquery-1.9.1.min.js"></script>     
   <script src="./assets/js/jquery.steps.js"></script>
 
@@ -17,148 +20,7 @@
 <!-- MIS ESTILOS-->
   <style>
     
-    .box {
-      max-width: 400px;
-      margin: 10px auto;
-    }
-
-    .perfil {
-      max-width: 100px;
-      max-height: 100px;
-      margin-left: 10px; 
-      border-radius: 6%;
-    }
-
-    .nombreperfil {
-      font-size: 12px;
-      font-style: bold;
-     
-    }
-
-     .descripciónperfil {
-      font-size: 11px;     
-    }
     
-     .cardperfil {
-      border: 0; 
-      margin-top: 10px;  
-    }
-  </style>
-
-
-
-<!-- ESTILOS STEPS-->
-<style>
-
-.multisteps-form__progress {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
-.multisteps-form__progress-btn {
-  transition-property: all;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  position: relative;
-  padding-top: 20px;
-  color: rgba(108, 117, 125, 0.7);
-  text-indent: -9999px;
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  cursor: pointer;
-}
-
-@media (min-width: 500px) {
-  .multisteps-form__progress-btn {
-    text-indent: 0;
-  }
-}
-
-.multisteps-form__progress-btn:before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  width: 13px;
-  height: 13px;
-  content: '';
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  background-color: #fff;
-  box-sizing: border-box;
-  z-index: 3;
-}
-
-.multisteps-form__progress-btn:after {
-  position: absolute;
-  top: 5px;
-  left: calc(-50% - 13px / 2);
-  transition-property: all;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  display: block;
-  width: 100%;
-  height: 2px;
-  content: '';
-  background-color: currentColor;
-  z-index: 1;
-}
-
-.multisteps-form__progress-btn:first-child:after {
-  display: none;
-}
-
-.multisteps-form__progress-btn.js-active {
-  color: #007bff;
-}
-
-.multisteps-form__progress-btn.js-active:before {
-  -webkit-transform: translateX(-50%) scale(1.2);
-          transform: translateX(-50%) scale(1.2);
-  background-color: currentColor;
-}
-
-.multisteps-form__form {
-  position: relative;
-}
-
-.multisteps-form__panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.multisteps-form__panel.js-active {
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-}
-
-.multisteps-form__panel[data-animation="scaleIn"] {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-.multisteps-form__panel[data-animation="scaleIn"].js-active {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-} 
   </style>
 
 </head>
@@ -177,12 +39,13 @@
     <ul class="navbar-nav mr-auto">
       
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          OPCIONES
+        <a class="nav-link" href="#" >
+          Iniciar sesión
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">OPCION 1</a>
-          <a class="dropdown-item" href="#">OPCION 2</a>
+        <a class="nav-link" href="#" >
+          Crear cuenta
+        </a>
+       
       </li>
      </ul>
   </div>
@@ -192,16 +55,12 @@
 
 <div class="multisteps-form">
   <!--progress bar-->
-  <div class="row">
-    <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
-      <div class="multisteps-form__progress">
-        <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Inicio</button>
-        <button class="multisteps-form__progress-btn" type="button" title="Address">Sus Datos</button>
-        <button class="multisteps-form__progress-btn" type="button" title="Order Info">Especialidad</button>
-        <button class="multisteps-form__progress-btn" type="button" title="Comments">Su Cobertura</button>
-        <button class="multisteps-form__progress-btn" type="button" title="Comments">Finzalizado</button>
-      </div>
-    </div>
+  <div class="multisteps-form__progress">
+    <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">Inicio</button>
+    <button class="multisteps-form__progress-btn" type="button" title="Address">Sus Datos</button>
+    <button class="multisteps-form__progress-btn" type="button" title="Order Info">Especialidad</button>
+    <button class="multisteps-form__progress-btn" type="button" title="Comments">Su Cobertura</button>
+    <button class="multisteps-form__progress-btn" type="button" title="Comments">Finzalizado</button>
   </div>
   <!--form panels-->
   <div class="row">
@@ -216,15 +75,12 @@
 
             <section id="section1" class="main mt-5">
                            
-                    <div class="box">
-                    <h2 class="display-3  mb-5 text-center">
-                        <span class="font-weight-bold">Turnos</span> <br>    
-                        <span class="text-primary font-weight-light"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Online</span> 
-                    </h2>
+                    <div class="box">                  
                     <h4 >Encontrá tu especialista <br> y pedí turno facilmente</h4>
                           <div class="form-group">
                             <label for="exampleInputEmail1" class=""><small>DNI</small></label>
                             <input type="email" class="multisteps-form__input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su número de DNI">
+                            
                           </div>
                     </div>
             </section>
@@ -245,13 +101,37 @@
                     <div class="box">
                       <h4>Complete los <br> siguientes campos</h4>
                           <div class="form-group">
-                            <label for="exampleInputEmail1"><small>Nombre completo</small></label>
-                            <input type="email" class="multisteps-form__input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Luis Alberto">
+                            <label for="full-name"><small>Nombre completo</small></label>
+                            <input type="text" class="multisteps-form__input form-control" id="full-name" placeholder="Escriba su nombre">
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputEmail1"><small>Apellido</small></label>
-                            <input type="email" class="multisteps-form__input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Galvan">
+                            <label for="surname"><small>Apellido</small></label>
+                            <input type="text" class="multisteps-form__input form-control" id="surname" aria-describedby="emailHelp" placeholder="Escriba su apellido">
                           </div>  
+                          <div class="form-group">
+                            <label for="cobertura"><small>Cobertura preferencial</small></label>
+                            <select class="multisteps-form__input form-control" id="exampleFormControlSelect1">
+                              <option disabled selected>Cobertura Médica</option>
+                              <option>IOSEP</option>
+                              <option>PAMI</option>
+                              <option>OSDE</option>
+                              <option>OSPE</option>
+                              <option>SMAUNSE</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1"><small>Sexo</small></label>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="male" name="sex" class="custom-control-input">
+                              <label class="custom-control-label" for="male">Masculino</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input type="radio" id="female" name="sex" class="custom-control-input">
+                              <label class="custom-control-label" for="female">Femenino</label>
+                            </div>
+
+                            
+                          </div>
                     </div>
             </section>
              <!-- ----- -->
@@ -271,7 +151,11 @@
             <!-- MI TERCERA SECTION -->
               <section id="section2" class="main mt-5">
                       <div class="box">
-                           <h4>Bienvenido Luis <br> Gracias por regresar</h4>
+                        <div class="header-box">
+                          <h4>¡Hola Luis!</h4>
+                          <p>Relice la búsqueda del profesional y solicite su turno.</p>
+                        </div>
+                           
                           
                                      <div class="form-group">
                                         <label for="exampleFormControlSelect1">Especialidad</label>
@@ -296,58 +180,80 @@
                             </div>   
                       </div>
                   <div class="box">
-                      <div class="card-body cardperfil">
-                            <div class="row justify-content-start align-items-center">
-                                <div class="col-5 p-2"> 
-                                   <img src="assets/images/medico2.jpg" alt="" class="perfil">
-                                </div> 
-                                <div class="col-7">
-                                    <a href="#services-1" class="card-link" data-toggle="modal">
-                                       <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
-                                    </a>
-                                    <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
-                                 </div>   
-                            </div>      
+                    <div class="profesionals">
+                      <div class="row">
+
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                          <a href="#services-1" class="card-link" data-toggle="modal">
+                            <div class="card-profesional">
+                              <div class="d-flex justify-content-start align-items-center">
+                                  <div class="image-profile mr-3"> 
+                                    <img src="assets/images/medico2.jpg" alt="" class="perfil">
+                                  </div> 
+                                  <div class="text-profile">                                    
+                                        <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
+                                    
+                                      <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
+                                  </div>   
+                              </div> 
+                            </div>
+                          </a>
+                        </div><!-- item profile -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                          <a href="#services-1" class="card-link" data-toggle="modal">
+                            <div class="card-profesional">
+                              <div class="d-flex justify-content-start align-items-center">
+                                  <div class="image-profile mr-3"> 
+                                    <img src="assets/images/medico2.jpg" alt="" class="perfil">
+                                  </div> 
+                                  <div class="text-profile">                                    
+                                        <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
+                                    
+                                      <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
+                                  </div>   
+                              </div> 
+                            </div>
+                          </a>
+                        </div><!-- item profile -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                          <a href="#services-1" class="card-link" data-toggle="modal">
+                            <div class="card-profesional">
+                              <div class="d-flex justify-content-start align-items-center">
+                                  <div class="image-profile mr-3"> 
+                                    <img src="assets/images/medico2.jpg" alt="" class="perfil">
+                                  </div> 
+                                  <div class="text-profile">                                    
+                                        <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
+                                    
+                                      <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
+                                  </div>   
+                              </div> 
+                            </div>
+                          </a>
+                        </div><!-- item profile -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                          <a href="#services-1" class="card-link" data-toggle="modal">
+                            <div class="card-profesional">
+                              <div class="d-flex justify-content-start align-items-center">
+                                  <div class="image-profile mr-3"> 
+                                    <img src="assets/images/medico2.jpg" alt="" class="perfil">
+                                  </div> 
+                                  <div class="text-profile">                                    
+                                        <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
+                                    
+                                      <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
+                                  </div>   
+                              </div> 
+                            </div>
+                          </a>
+                        </div><!-- item profile -->
+                        
+                          
                       </div>
-                      <div class="card-body cardperfil">
-                            <div class="row justify-content-start align-items-center">
-                                <div class="col-5 p-2"> 
-                                   <img src="assets/images/medico1.jpg" alt="" class="perfil">
-                                </div> 
-                                <div class="col-7">
-                                    <a href="#services-1" class="card-link" data-toggle="modal">
-                                       <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
-                                    </a>
-                                    <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
-                                 </div>   
-                            </div>      
-                      </div>
-                      <div class="card-body cardperfil">
-                            <div class="row justify-content-start align-items-center">
-                                <div class="col-5 p-2"> 
-                                   <img src="assets/images/medico3.jpg" alt="" class="perfil">
-                                </div> 
-                                <div class="col-7">
-                                    <a href="#services-1" class="card-link" data-toggle="modal">
-                                       <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
-                                    </a>
-                                    <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
-                                 </div>   
-                            </div>      
-                      </div>
-                      <div class="card-body cardperfil">
-                            <div class="row justify-content-start align-items-center">
-                                <div class="col-5 p-2"> 
-                                   <img src="assets/images/medico4.jpg" alt="" class="perfil">
-                                </div> 
-                                <div class="col-7">
-                                    <a href="#services-1" class="card-link" data-toggle="modal">
-                                       <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>
-                                    </a>
-                                    <p class="descripciónperfil">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>
-                                 </div>   
-                            </div>      
-                      </div>
+                     
+                    </div>
+                     
+                     
                   </div>
               </section>
             <!-- ----- -->
@@ -366,8 +272,18 @@
           <div class="multisteps-form__content">
                  <!-- MI CUARTA SECTION -->
                   <div class="box">
-                    <div class="text-left">
-                       <div class="form-group">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <h3>¡Ya falta menos!</h3>
+                        <p>Solo un paso más y su turno estará registrado</p>
+                        
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Example textarea</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba el motivo de su consulta"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="form-group">
                           <select class="multisteps-form__input form-control" id="exampleFormControlSelect1">
                             <option disabled selected>Cobertura Médica</option>
                             <option>IOSEP</option>
@@ -400,17 +316,15 @@
                           <label for="exampleInputEmail1"><small>Dato de Contacto</small></label>
                           <input type="email" class="multisteps-form__input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Teléfono o Mail">
                         </div>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1"><small>Motivo de Consulta</small></label>
-                          <input type="email" class="multisteps-form__input form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escriba el motivo de su consulta">
-                        </div>
-                  </div>
+                      </div>
+                    </div>
+                    
 
                   </div>
                  <!-- ----- -->
             <div class="button-row d-flex mt-4">
               <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Anterior</button>
-              <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Siguiente</button>
+              <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Finalizar</button>
             </div>
           </div>
         </div>
@@ -469,51 +383,96 @@
 
 <!-- Modals   ---------------------------------->
 
-                        <div class="modal fade" id="services-1" tabindex="-1" role="dialog" aria-labelledby="services-1Label" aria-hidden="true" style="z-index: 5000!important;">
-                              <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+  <div class="modal fade" id="services-1" tabindex="-1" role="dialog" aria-labelledby="services-1Label" aria-hidden="true" style="z-index: 5000!important;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
 
-                                        <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                          </button>
-                                        </div>
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
 
-                                        <div class="modal-body text-center">
-                                              <img src="assets/images/medico2.jpg" alt="" class="perfil">
-                                              <h4>Dra Irene Beatriz Barán </h4>
-                                              <p class="descripciónperfil mt-3">Médico Clínico <br> Tratamiento del Dolor, clínica general</p>    
-                                              <h5 class="text-primary font-weight-light">CONTACTO</h5>
-                                                  
-                                                     <div class="form-group">
-                                                        <select class="multisteps-form__input form-control" id="exampleFormControlSelect1">
-                                                          <option disabled selected>Lugar de atención</option>
-                                                          <option>Clínica Yunes</option>
-                                                          <option>Clínica Galeno</option>
-                                                          <option>Clínica del Sol</option>
-                                                        </select>
-                                                      </div>
-                                                 
-                                                      <p class="descripciónperfil mt-3">Horarios Disponibles</p>    
-                                                      <h5 class="text-primary font-weight-light">10 de Abril 2020</h5>
-                                                      <button type="button" class="btn btn-block btn-outline-dark">
-                                                        <h5 class="text-primary font-weight-light">9:30</h5>
-                                                      </button>
-                                                       <button type="button" class="btn btn-block btn-outline-dark">
-                                                        <h5 class="text-primary font-weight-light">10:00</h5>
-                                                      </button>
-                                                       <button type="button" class="btn btn-block btn-outline-dark">
-                                                        <h5 class="text-primary font-weight-light">10:30</h5>
-                                                      </button>
-                                                       <button type="button" class="btn btn-block btn-outline-dark">
-                                                        <h5 class="text-primary font-weight-light">11:00</h5>
-                                                      </button>
-                                                  
-                                        </div>     
-                                          <!-- button href="#section3" type="submit" class="btn btn-primary btn-block mt-4 mb-4">FINALIZAR</button -->   
-                                  </div>
-                                </div>   
+                  <div class="modal-body">
+                        
+                        <div class="card-profesional">
+                          <div class="d-flex justify-content-start align-items-center">
+                              <div class="image-profile mr-3"> 
+                                <img src="assets/images/medico2.jpg" alt="" class="perfil">
+                              </div> 
+                              <div class="text-profile">                                    
+                                    <h5 class="card-title nombreperfil py-1">Dra Irene Beatriz Barán </h5>                                
+                                    <p class="descripciónperfil">Médico Clínico Tratamiento del Dolor, clínica general</p>
+                                    <a href="#">Ver perfil</a>
+                              </div>   
+                          </div> 
                         </div>
+
+                        <div class="tabs-profile mt-5">
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Turnos</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Resumen</a>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <div class="form-group mt-4">
+                                <select class="multisteps-form__input form-control" id="exampleFormControlSelect1">
+                                  <option disabled selected>Lugar de atención</option>
+                                  <option>Clínica Yunes</option>
+                                  <option>Clínica Galeno</option>
+                                  <option>Clínica del Sol</option>
+                                </select>
+                              </div>
+                            </div><!-- tab calendar -->
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                              <div class="contact-tab">
+                                <p>Teléfono: <span>385456589</span></p>
+                                <a href="#" class="btn btn-success btn-block">Enviar mensaje</a>
+
+                                <h5>Lugares de atención</h5>
+                                <ul class="list-directions">
+                                  <li>
+                                    <p>Sanatorio Alberdi</p>
+                                    <p>Belgrano sur 254, Santiago capital</p>
+                                  </li>
+                                  <li>
+                                    <p>Clínica norte</p>
+                                    <p>Belgrano sur 254, Santiago capital</p>
+                                  </li>
+                                </ul>
+
+                                <ul class="social-nav">
+                                  <li><a href="#">facebook</a></li>
+                                  <li><a href="#">Linkedin</a></li>                                 
+                                </ul>
+                              </div>
+                             </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                              <div class="resumen-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga repudiandae esse facilis culpa accusantium <br> suscipit voluptas maiores beatae voluptatem dicta accusamus earum vero voluptate maxime, laboriosam quaerat! Placeat, dolor. Illum, deserunt! Porro, cum? Magni inventore alias perspiciatis non minus similique tempora atque nam explicabo.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                       
+                            
+                       
+                            
+                              
+                            
+                  </div>     
+                    <!-- button href="#section3" type="submit" class="btn btn-primary btn-block mt-4 mb-4">FINALIZAR</button -->   
+            </div>
+          </div>   
+  </div>
 <!--fin de modal -->
 
 <script>
