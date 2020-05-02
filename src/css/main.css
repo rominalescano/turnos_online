@@ -121,7 +121,7 @@ section.intro{
 .conect-line{
     background-color: black;
     height: 25vh;
-    width: 2px;
+    width: 1px;
     position: absolute;
     margin-top: 46px;
     margin-left: 34px;
@@ -134,7 +134,7 @@ section.intro{
     background-color: black;
     width: 8px;
     margin-left: -4px;
-    height: 2px;
+    height: 1px;
     position: absolute;    
 }
 
@@ -189,11 +189,17 @@ section#turnos{
     height: 380px;
     width: 380px;
     top: -100px;
-    right: -32px;
+    right: -2px;
     mix-blend-mode: multiply;
     position: absolute;
     z-index: -1;
     border-radius: 500px 500px 0px 500px;
+}
+
+.text-circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .bancas{
@@ -229,4 +235,39 @@ section#turnos{
        left: -185px;
        top: 120px;
    }
+}
+
+
+/* section historial */ 
+
+section#historial{
+    padding-top: 240px;
+    padding-bottom: 40px;
+    
+    width: 100%; 
+    
+}
+
+@media (min-width:992px){
+    section#historial{
+        padding-top: 320px;
+        right: -200px;       
+       
+    }
+
+    .img-doctor{
+
+        margin-top: -300px;
+        
+    }
+      
+}
+
+
+.img-doctor img{
+    
+    max-width: 100%;
+    height: auto;
+    margin-top: -100px;
+    
 }
