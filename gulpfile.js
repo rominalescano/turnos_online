@@ -25,18 +25,18 @@ function html() {
         .pipe(gulpIf(isProd, htmlmin({
             collapseWhitespace: true
         })))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('public'));
 }
 
 function css() {
-    return gulp.src('src/sass/style.scss')
+    return gulp.src(['src/sass/style.scss', 'src/css/*.css'])
         .pipe(gulpIf(!isProd, sourcemaps.init()))
         .pipe(sass({
             includePaths: ['node_modules']
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, cssmin()))
-        .pipe(gulp.dest('docs/css/'));
+        .pipe(gulp.dest('public/css/'));
 }
 
 function js() {
@@ -46,19 +46,19 @@ function js() {
         }))
         .pipe(concat('all.js'))
         .pipe(gulpIf(isProd, uglify()))
-        .pipe(gulp.dest('docs/js'));
+        .pipe(gulp.dest('public/js'));
 }
 
 function img() {
     return gulp.src('src/img/*')
         .pipe(gulpIf(isProd, imagemin()))
-        .pipe(gulp.dest('docs/img/'));
+        .pipe(gulp.dest('public/img/'));
 }
 
 function serve() {
     browserSync.init({
         open: true,
-        server: './docs'
+        server: './public'
     });
 }
 
@@ -71,6 +71,7 @@ function browserSyncReload(done) {
 function watchFiles() {
     gulp.watch('src/**/*.html', gulp.series(html, browserSyncReload));
     gulp.watch('src/**/*.scss', gulp.series(css, browserSyncReload));
+    gulp.watch('src/css/*.css', gulp.series(css, browserSyncReload));
     gulp.watch('src/**/*.js', gulp.series(js, browserSyncReload));
     gulp.watch('src/img/**/*.*', gulp.series(img));
 
@@ -78,7 +79,7 @@ function watchFiles() {
 }
 
 function del() {
-    return gulp.src('docs/*', {read: false})
+    return gulp.src('public/*', {read: false})
         .pipe(clean());
 }
 
