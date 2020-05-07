@@ -294,53 +294,63 @@ section#historial{
 @media (min-width:992px){
     section#historial{
         padding-top: 320px;
-        right: -200px;       
-       
+        right: -200px; 
     }
 
     .img-doctor{
-
-        margin-top: -300px;
-        
-    }
-      
+        margin-top: -300px;        
+    }      
 }
 
 
-.img-doctor img{
-    
+.img-doctor img{    
     max-width: 100%;
     height: auto;
-    margin-top: -100px;
-    
+    margin-top: -100px;    
 }
 
 /*secion profesional*/
 .ca-profesional{
-    padding: 24px;      
-    position: relative;
+    padding: 24px;  
+    position: relative;    
+    
 }
 
 @media (min-width:992px){
-    .ca-profesional{
+    .ca-profesional .cont-caf{
         min-height: 600px;
-        border-radius: 500px 0 0 500px;
+        border-radius: 500px 0 0 500px;       
+        margin-left: 85px;
+        margin-right: -30px;
+        overflow: hidden;  
+        position: relative;
         display: flex;
         align-items: center;
-    justify-content: flex-end;
-    margin-left: 85px;
-    margin-right: -30px;
-    overflow: hidden;  
     } 
+
+    .ca-profesional:after{
+        content:"";
+        height: 50%;
+        width: 100%;
+        display: block;
+        background-color: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;        
+    }
+
+    .ca-profesional .inner-ca{    
+        max-width: 350px;
+        margin-right: 8rem;
+        z-index: 2;
+        margin-left: 800px;
+    }
 }
 
-.ca-profesional img{
+.ca-profesional .cont-caf img{
     position: absolute;
     left: 0;
 }
 
-.ca-profesional .inner-ca{
-    
-    max-width: 350px;
-    margin-right: 8rem;
-}
