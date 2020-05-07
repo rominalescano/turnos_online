@@ -3,7 +3,7 @@
 $primary: #22579B;
 $secondary: #DB9A60;
 $dark : #000;
-$info : #549f93; 
+$info : #45c5b0; 
 
 $theme-colors: (
     "primary": $primary,
@@ -177,6 +177,14 @@ $input-focus-box-shadow:                none;
 
 
  @import "node_modules/bootstrap/scss/bootstrap";
+
+
+ @media (max-width:768px){
+  .btn-sm-block{
+    display: block;
+    width: 100%;
+  }
+ }
 
 
 .form-group{

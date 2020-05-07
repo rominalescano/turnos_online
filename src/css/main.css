@@ -52,7 +52,7 @@ section.intro{
 }
 
 .caption{
-    max-width: 320px;
+   
 }
 
 @media (min-width:992px){
@@ -68,9 +68,7 @@ section.intro{
     }
 }
 
-.desc-intro{
-    max-width: 160px;    
-}
+
 .img-bg{
     position: relative;
     top: 0;    
@@ -95,6 +93,10 @@ section.intro{
 
     .img-bg img{
         right: -50px;
+    }
+
+    .desc-intro{
+        max-width: 160px;    
     }
 
 }
@@ -311,11 +313,15 @@ section#historial{
 
 /*secion profesional*/
 .ca-profesional{
-    padding: 24px;  
+    
     position: relative;    
     
 }
 
+
+.ca-profesional .cont-caf{
+    padding:32px;
+}
 @media (min-width:992px){
     .ca-profesional .cont-caf{
         min-height: 600px;
@@ -326,6 +332,7 @@ section#historial{
         position: relative;
         display: flex;
         align-items: center;
+          
     } 
 
     .ca-profesional:after{
