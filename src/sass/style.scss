@@ -1,20 +1,40 @@
 //Colors
-
-$primary: #22579B;
-$secondary: #DB9A60;
-$dark : #000;
-$info : #45c5b0; 
+$white : #fff;
+$primary: #1D8FC8;
+$secondary: rgb(240, 188, 92);
+$warning: #feeeb0;
+$danger: #ba5624;
+$dark : #313131;
+$success : #45c5b0; 
+$info : #b9dae9; 
+$light : #f0ebeb; 
 
 $theme-colors: (
     "primary": $primary,
     "secondary": $secondary,
+    "warning": $warning,
     "dark": $dark,
     "info": $info,
+    "success": $success,
+    "white": $white,
+    "light": $light,
 );
 
+root{
+  --primary: $primary;
+  --secondary: $secondary;
+  --danger: $danger;
+  --warning: $warning;
+  --dark : $dark;
+  --white : $white;
+  --info: $info;
+  --light: $light;
+  --gradient: linear-gradient(-45deg,  $secondary, $primary, #201dc8, $info);
+}
 
 
-$body-color: #000;
+
+$body-color: $dark;
 
 // Spacing
 $spacer: 1rem !default;
@@ -37,8 +57,8 @@ $spacers: map-merge(
 $font-family-sans-serif: 'Public Sans', sans-serif;
 
 //Font weight
-$font-weight-bold:           700;
-$font-weight-bolder:         800;
+$font-weight-bold:           600;
+$font-weight-bolder:         700;
 
 
 
@@ -97,6 +117,11 @@ $display2-size:               7.594rem;
 $display3-size:               $h1-font-size;
 $display4-size:               $h2-font-size;
 
+$display1-weight:             600;
+$display2-weight:             600;
+$display3-weight:             600;
+$display4-weight:             600;
+
 
 // paragraph
 
@@ -113,7 +138,9 @@ $paragraph-margin-bottom:   2rem;
 
 // Butons
 
-$btn-border-radius:           4px;
+$btn-border-radius:           2px;
+$btn-border-radius-lg:        2px;
+$btn-border-radius-sm:         2px;
 
 
 $btn-padding-y:               .8rem ;
@@ -244,5 +271,8 @@ $input-focus-box-shadow:                none;
     color: $secondary;
   }
 }
+
+
+//bg animated
 
 

@@ -10,12 +10,43 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="stylesheet" href="css/animate.css" />
         <link rel="icon" href="./img/icon.png" />
-        <title>Basic - Bootstrap 4 with Gulp 4</title>
+        <title>Sanus - web de salud</title>
         <!-- fonts -->
         <link rel="stylesheet" href="./fonts/publicsans.css">
+        <link rel="stylesheet" href="./fonts/icons.css">
     </head>
     
     <body>
+        <nav id="navbar">
+            <div class="navigation-fixed no-top">
+                <div class="nav-container">
+                    <div class="brand">
+                        <img src="img/sanus_blanco.svg" alt="">
+                        <img src="img/sanus_color.svg" alt="">
+                    </div>
+                    <div class="navigation">
+                        <div id="toggle" class="">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </div>
+                        <div id="menu" class="menu-main d-md-block">
+                            <ul>
+                                <li><a class="nav-item" href="#">Iniciar sesión <i class="icon icon-angle-right"></i></a>
+
+                                </li>
+                                <li><a class="nav-item" href="#">Crear cuenta <i class="icon icon-angle-right"></i></a>
+
+                                </li>
+                                <li><a class="nav-item" href="#contact">Contacto <i class="icon icon-angle-right"></i></a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <div class="jumbotron bg-white text-center justify-content-center align-items-center mb-0">
             <div class="container">
                  <h1 class="display-3">About</h1>
@@ -36,39 +67,124 @@
                 </div>
             </div>
         </div>
-        <footer class="bg-dark text-light py-5">
+        <footer class="footer bg-dark text-light " id="contact">
             <div class="container-fluid">
                  <h3 class="h2 text-secondary">
             Consultas
         </h3>
 
-                <form class="form-dark" action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputText1" aria-describedby="TextHelp"
-                        placeholder="Nombre completo">
-                        <label for="exampleInputText1">Nombre completo</label>
+                <div class="row align-item-end flex-md-row-reverse justify-content-between">
+                    <div class="col-12 col-md-6">
+                        <form class="form-dark form-max form-footer" action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" aria-describedby="TextHelp"
+                                placeholder="Nombre completo">
+                                <label for="exampleInputText1">Nombre completo</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Email">
+                                <label for="exampleInputEmail1">Email address</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputTel1" aria-describedby="TextHelp"
+                                placeholder="Teléfono">
+                                <label for="exampleInputTel1">Nombre completo</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Consulta"></textarea>
+                                <label for="exampleFormControlTextarea1">Consulta</label>
+                            </div>
+                            <button class="btn btn-secondary btn-lg btn-sm-block">Enviar</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Email">
-                        <label for="exampleInputEmail1">Email address</label>
+                    <div class="col-12 col-md-3">
+                         <h4 class="text-secondary h4 mt-5">info@tarjetasanus.com</h4>
+
+                        <div class="contacts-items my-5">
+                            <p><strong>Teléfono:</strong>
+
+                                <br>03859636548</p>
+                            <p><strong>Visitenos en:</strong>
+
+                                <br>Hipólito Yrigoyen 440 - Oficina 3 Santiago del Estero</p>
+                            <div class="icon-link"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputTel1" aria-describedby="TextHelp"
-                        placeholder="Teléfono">
-                        <label for="exampleInputTel1">Nombre completo</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="Consulta"></textarea>
-                        <label for="exampleFormControlTextarea1">Consulta</label>
-                    </div>
-                    <button class="btn btn-secondary btn-lg btn-sm-block">Enviar</button>
-                </form>
+                </div>
             </div>
+            <div class="copy text-right mt-5 mr-3">© Copyright 2020 - Tarjeta Sanus</div>
         </footer>
         <script src="js/all.js"></script>
-        <script src="js/wow.min.js"></script>
+        <script>
+            var wow = new WOW( {
+                mobile:    false
+              });
+            wow.init();
+        </script>
+        <script type="text/javascript">
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+                } else {
+                document.getElementById("navbar").style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+            
+            
+                /* ============================================== */
+                /* EFFECT MENU */
+                /* ============================================== */
+            
+                $(function(){
+                    jQuery(window).scroll(function () {
+                        if (jQuery(window).scrollTop() > 30) {
+                            jQuery(".navigation-fixed-top").addClass("effect");
+                            jQuery(".navigation-fixed").addClass("effect");
+                        } else {
+                            jQuery(".navigation-fixed-top").removeClass("effect");
+                            jQuery(".navigation-fixed").removeClass("effect");
+                        }
+                        if (jQuery(window).scrollTop() > 180) {
+                            jQuery(".section-main").addClass("effect");                
+                        } else {
+                            jQuery(".section-main").removeClass("effect");                
+                        }
+            
+                        if (jQuery(window).scrollTop() > 270) {
+                            jQuery(".section-main").addClass("op-0");                
+                        } else {
+                            jQuery(".section-main").removeClass("op-0");                
+                        }
+                    });
+                });
+            
+                $("#toggle").click(function() {
+                    $(this).toggleClass("on");
+                     $("#menu").toggleClass("open");
+                     
+            
+                     if($(this).attr('class') == 'on'){
+                      	$("body").addClass('menu-open');
+                      }else{ 
+                      	$("body").removeClass('menu-open');
+                      }
+                    
+                    
+                });
+            
+            
+            
+                $("#menu li a").click(function() {          
+                    $("#menu").removeClass('open');
+                    $("#toggle").toggleClass("on");
+                    $("body").removeClass('menu-open');
+                });
+        </script>
     </body>
 
 </html>

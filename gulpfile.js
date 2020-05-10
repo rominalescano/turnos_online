@@ -55,6 +55,11 @@ function img() {
         .pipe(gulp.dest('public/img/'));
 }
 
+function fonts() {
+    return gulp.src('src/fonts/*')        
+        .pipe(gulp.dest('public/fonts/'));
+}
+
 function serve() {
     browserSync.init({
         open: true,
@@ -72,8 +77,10 @@ function watchFiles() {
     gulp.watch('src/**/*.html', gulp.series(html, browserSyncReload));
     gulp.watch('src/**/*.scss', gulp.series(css, browserSyncReload));
     gulp.watch('src/css/*.css', gulp.series(css, browserSyncReload));
+    gulp.watch('src/fonts/*', gulp.series(fonts, browserSyncReload));
     gulp.watch('src/**/*.js', gulp.series(js, browserSyncReload));
     gulp.watch('src/img/**/*.*', gulp.series(img));
+    
 
     return;
 }
@@ -87,5 +94,5 @@ exports.css = css;
 exports.html = html;
 exports.js = js;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img);
+exports.serve = gulp.parallel(html, css, js, img, fonts, watchFiles, serve);
+exports.default = gulp.series(del, html, css, js, img, fonts);
