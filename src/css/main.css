@@ -464,10 +464,10 @@ section{
 @media (min-width:970px){
     img.mujer{    
         bottom: -55px;
-        left: calc(50% - 12.5vw);
+        left: calc(50% - 15vw);
         position: fixed;
         z-index: 2;
-        width: 25vw;        
+        width: 30vw;        
     }
 }
 
