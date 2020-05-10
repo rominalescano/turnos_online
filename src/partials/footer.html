@@ -50,17 +50,12 @@
 </footer>
 
 <script src="js/all.js"></script>
+
 <script>
-    wow = new WOW(
-        {
-            boxClass:     'wow',      // default
-            animateClass: 'animated', // default
-            offset:       0,          // default
-            mobile:       false,       // default
-            live:         true        // default
-        }
-    ) 
-    WOW().init();
+var wow = new WOW( {
+    mobile:    false
+  });
+wow.init();
 </script>
 
 
@@ -109,13 +104,13 @@ window.onscroll = function() {
     $("#toggle").click(function() {
         $(this).toggleClass("on");
          $("#menu").toggleClass("open");
+         
 
-        if($(this).attr('class') == 'on'){
-        $("body").addClass('menu-open');
-        }else{ 
-        $("body").removeClass('menu-open');
-        }
-
+         if($(this).attr('class') == 'on'){
+          	$("body").addClass('menu-open');
+          }else{ 
+          	$("body").removeClass('menu-open');
+          }
         
         
     });
@@ -123,10 +118,13 @@ window.onscroll = function() {
 
 
     $("#menu li a").click(function() {          
-        $("#menu").css('display','none');
+        $("#menu").removeClass('open');
         $("#toggle").toggleClass("on");
         $("body").removeClass('menu-open');
     });
+
+
+ 
    
 
 </script>

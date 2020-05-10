@@ -1,14 +1,17 @@
 
 
 html,body{
-    max-width: 100%;
-    height: 100%;
+    
+   
     font-size: 14px;
+    overflow-x: hidden;
+    width: 100vw;
+   
     
 }
 
 body{
-    overflow-x: hidden;
+    
     
 }
 
@@ -35,6 +38,8 @@ body{
   z-index: 20000;
 }
 
+
+
 .nav-container{
     display: flex;
     justify-content: space-between;
@@ -56,9 +61,17 @@ body{
 
 
 .menu-main{
-    display: flex;
+    display: none;
     margin: 0;
     padding-right: 32px;
+    position: absolute;
+}
+
+@media (min-width:960px){
+    .menu-main{
+        display: flex; 
+        position: relative;
+    }
 }
 
 .menu-main li{
@@ -73,7 +86,7 @@ body{
 
 }
 .navigation-fixed.effect .menu-main li a{
-    color: var(--dark) ;
+    
 }
 
 .menu-main li a:hover{
@@ -130,6 +143,10 @@ display: block;
   .navigation-fixed.effect{
     padding: 14px 0;
   }
+
+  #toggle{
+      display: none;
+  }
 }/**/
 
 .navigation-fixed{
@@ -156,7 +173,7 @@ display: block;
     z-index: 50;
     top: 0;
     cursor: pointer;
-    right: 0;
+    right: 24px;
   }
 
   #toggle::before{
@@ -176,13 +193,22 @@ display: block;
 
   #toggle div {   
     height: 3px;
-    background: var(--dark);
+    background: var(--white);
     margin: 6px auto;
     transition: all 0.3s;
     backface-visibility: hidden;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+  }
+
+
+  .effect #toggle div{
+    background: var(--dark); 
+  }
+
+  .menu-open .effect #toggle div{
+    background: var(--white); 
   }
 
   #toggle.on .one {
@@ -197,19 +223,83 @@ display: block;
     transform: rotate(-45deg) translate(7px, -8px);
   }
 
+  .menu-main li a i{
+    display: none;
+}
 
-  #menu.open{
-      display: block
+  
+
+  @media (max-width:960px){
+    .menu-main.open{
+        display: block;
+        position: fixed;       
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .menu-main.open:before{
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--dark);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .9;
+    }
+
+
+    .menu-main.open ul{
+        padding-top: 25vh;
+        padding-left: 32px;
+        padding-right: 24px;
+        margin: 0;
+        
+    }
+
+    .menu-main.open li{
+        display: block;
+        padding-top: 18px;
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+        
+        margin:0;
+        
+    }
+
+    .menu-main.open li + li{
+        border-top: solid 1px rgba(255, 255, 255, 0.6);
+    }
+
+    .menu-main.open li a.nav-item{
+        color: var(--white);
+        font-size: 1.4rem;
+        font-weight: 300;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-main.open li a i{
+        display: inline-block;
+    }
   }
 
+  
 
+.menu-open  section {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
 
-
-
-
-
- 
-
+.menu-open  #toggle{
+   
+}
 
 
 
@@ -223,6 +313,13 @@ display: block;
 }
 
 
+
+
+
+section{
+   
+    
+}
 
 .container-fluid{
     padding:0 24px;
@@ -243,7 +340,7 @@ display: block;
 
 /*section main*/
 .section-main{
-    padding: 28vh 0 15vh 0;
+    padding: 28vh 0 5vh 0;
     
     -webkit-transition:all 1s ease;
     -moz-transition:all 1s ease;
@@ -344,7 +441,7 @@ display: block;
         position: absolute;
         width: 60vw;
         top: 10vh;
-        right:-25px;
+        right:0px;
         z-index: -1;
     }
 
@@ -431,14 +528,16 @@ section.intro{
     position: relative;
     top: 0;    
     z-index: -1;    
-    
     max-width: 100%;
+    
     
 }
 .img-bg img{
     position: relative;
     max-width: 100%;
-    right: -50px;
+    right:0;
+    
+    
 }
 
 @media (min-width:768px){
