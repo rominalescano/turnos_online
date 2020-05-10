@@ -59,6 +59,10 @@ body{
     display: none;
 }
 
+.effect .brand{
+    width: 120px;
+}
+
 
 .menu-main{
     display: none;
@@ -72,6 +76,10 @@ body{
         display: flex; 
         position: relative;
     }
+}
+
+.menu-main ul{
+    margin: 0;
 }
 
 .menu-main li{
