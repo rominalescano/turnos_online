@@ -1,8 +1,7 @@
 
 
 html,body{
-    
-   
+    height: 100%;   
     font-size: 14px;
     
    
@@ -317,9 +316,11 @@ display: block;
 /**BUTTONS*/
 .btn{
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .2rem;   
 }
-
+.btn-block{
+   
+}
 
 
 
@@ -367,9 +368,8 @@ section{
     display: block;
     position: absolute;    
     border-radius: 0 0 150px 0;    
-    background: linear-gradient(-45deg,  #DB9A60, #1D8FC8, #201dc8,#ba5624, #2b8aba,  );
+    background: var(--primary);
     background-size: 200% 800%;
-	animation: gradient 5s ease infinite;
     opacity: .8;
     top:0;
     z-index: -1;
@@ -379,17 +379,7 @@ section{
     
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+
 
 @media (min-width:960px){
 
@@ -435,7 +425,9 @@ section{
 
 
 
-.reserva-turnos{}
+.reserva-turnos{
+    max-width: 350px;
+}
 
 @media (max-width:768px){
     .reserva-turnos h4.title-sgt{   
@@ -477,6 +469,15 @@ section{
         left: calc(50% - 14vw);
     }
 }
+
+
+.copy-main{
+    position: absolute;
+    bottom: 32px;
+    right: 54px;
+}
+
+
 
 
 
@@ -862,3 +863,229 @@ footer.footer .container-fluid{
         display: block;
     }
 }
+
+section.step-one{
+    
+    
+    height: 100vh;
+}
+
+
+
+.aside-step-one{
+	border-right: 1px solid rgba(235,235,235,.2);
+    height: 100vh;
+    padding: 34px 4vw;;
+    width: 20vw;
+}
+
+.step-logo{
+   
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 74px;
+ }
+
+.woman-step-one{
+	
+    position: relative;
+    left: 29px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+
+
+.main-step-one{
+	
+
+}
+
+
+.back-step{
+    padding: 24px 32px;
+    margin-top: 24px;
+}
+
+
+@media (min-width:998px){
+    .main-content-step-one{
+        width: 80vw; 
+        position: absolute;
+        right: 0;       
+        top: 20vh;
+    }
+    .back-step{
+        position: absolute;
+        top: 0;
+        left: 20vw;
+    }
+}/**/
+
+.main-content-step-one{
+	padding: 32px;
+}
+
+.arrow-back-step{
+	font-size: 32px;
+	padding-bottom: 5rem;
+}
+
+.form-content-step{
+	
+}
+
+section.step-two{
+
+}
+@media (max-width: 768px){
+	section.step-two{
+		width: 100%;
+		margin-right: auto;
+	    margin-left: auto;
+	}
+}
+
+.black-aside{
+	background: var(--primary) ;
+	height: 100vh;
+	width: fit-content;
+	position: fixed;
+}
+
+@media (max-width: 768px){
+	.black-aside{
+		display: none;
+	}
+}
+
+.black-aside img{
+    transform: rotate(-90deg);
+    position: relative;
+    top: 50px;
+    width: 65px;
+}
+
+.flecha-black{
+	color:var(--dark);
+	font-size: 28px;
+	display: inline-block;
+    transform: rotate(180deg);
+}
+
+.flecha-back{
+	display: inline-block;
+    transform: rotate(180deg);
+}
+
+.form-select{
+	min-width: 15rem;
+}
+
+.mas-info{
+	color: var(--secondary);
+	font-size: 16px;
+}
+
+.profile-photo{
+	width: 127px;
+	height: 142px;
+    border-radius: 5px;
+}
+
+.profesional-title{
+	font-weight: 800;
+}
+
+.profesional-info{
+    line-height: 1.1rem;
+    margin-bottom: 0;
+}
+
+.profesionales a{
+    color: var(--dark);
+}
+
+.calendar-step-two{
+	background: var(--white);
+	border-left: 1px solid rgba(183, 183, 183, .5);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    min-height: 100vh;
+    padding: 44px;
+    width: 500px;
+    -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.calendar-step-two.collapsing{
+    right: -500px;
+}
+
+.calendar-step-two.collapse{
+    right: 0px;
+}
+
+.icon-cerrar{
+	font-size: 1.3rem;
+}
+
+.calendar-perfil{
+	color:gray;
+}
+
+.calendar-sub{
+	background: #feeeb0;
+	border-radius: 6px;
+}
+
+.calendar-mes a{
+	color:var(--black);
+}
+
+.calendar-test table th, .calendar-test table td {
+	border:none;
+	padding: 0.3rem 0.3rem;
+    text-align: center;
+    vertical-align: top;
+    font-size: 0.8rem;
+}
+
+.btn-wp{
+	padding: 0rem 2rem;
+}
+
+.btn-wp .icon-whatsapp-1{
+	position: relative;
+    top: 15px;
+    left: 20px;
+}
+
+.calendar-menu-slider{
+	border-bottom: 1px solid rgb(210,210,210);
+}
+
+.calendar-menu-slider a{
+	color:var(--black);
+	border-bottom: 3px solid rgba(210,210,210,0);
+    padding-bottom: 1rem;
+    position: relative;
+    top: 26px;
+}
+
+.calendar-menu-slider a.active{
+	border-bottom: 3px solid #f2bc5c;
+}
+
+.calendar-step-two .icon-cerrar{
+	color:black;
+}
+
+
+/*.step-two-saludo{
+	padding: 1rem 2rem !important;
+}*/
