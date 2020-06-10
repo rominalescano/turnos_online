@@ -165,7 +165,7 @@ display: block;
 
 
 .nav{
-    display: none;
+    
 }
 
 .menu-toggle{
@@ -650,7 +650,7 @@ section#turnos{
 }
 
 .inner-circle .h1{
-    font-size: 5rem;
+    
     max-width: 320px;
 }
 .bg-circle{
@@ -892,6 +892,7 @@ section.step-one{
     left: 29px;
     position: absolute;
     bottom: 0;
+    width: 20vw;
     
 }
 
@@ -950,7 +951,7 @@ section.step-two{
 .black-aside{
 	background: var(--primary) ;
 	height: 100vh;
-	width: fit-content;
+	width: 60px;
 	position: fixed;
 }
 
@@ -962,9 +963,17 @@ section.step-two{
 
 .black-aside img{
     transform: rotate(-90deg);
-    position: relative;
+    position: absolute;
     top: 50px;
-    width: 65px;
+    left: -20px;
+    width: 95px;
+}
+
+
+@media (min-width: 768px){
+    .black-aside + section{
+        margin-left: 125px;
+    }
 }
 
 .flecha-black{
@@ -994,17 +1003,22 @@ section.step-two{
     border-radius: 5px;
 }
 
-.profesional-title{
-	font-weight: 800;
+
+.img-profile{
+    overflow: hidden;
 }
 
-.profesional-info{
-    line-height: 1.1rem;
-    margin-bottom: 0;
+.img-profile img{
+    width: 100%;
+    height: auto;
 }
 
-.profesionales a{
+
+
+
+.prof-item a{
     color: var(--dark);
+    text-decoration: none;
 }
 
 .calendar-step-two{
@@ -1013,9 +1027,11 @@ section.step-two{
     position: fixed;
     top: 0px;
     right: 0px;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: auto;
     padding: 44px;
     width: 500px;
+    max-width: 100%;
     -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -1031,7 +1047,8 @@ section.step-two{
 }
 
 .icon-cerrar{
-	font-size: 1.3rem;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 .calendar-perfil{
@@ -1054,31 +1071,16 @@ section.step-two{
     vertical-align: top;
     font-size: 0.8rem;
 }
-
-.btn-wp{
-	padding: 0rem 2rem;
+.links-social a{
+   color: var(--dark);
+   font-size: 24px;
+   margin-right: 15px;
+   opacity: .5;  
+   text-decoration: none;
 }
 
-.btn-wp .icon-whatsapp-1{
-	position: relative;
-    top: 15px;
-    left: 20px;
-}
-
-.calendar-menu-slider{
-	border-bottom: 1px solid rgb(210,210,210);
-}
-
-.calendar-menu-slider a{
-	color:var(--black);
-	border-bottom: 3px solid rgba(210,210,210,0);
-    padding-bottom: 1rem;
-    position: relative;
-    top: 26px;
-}
-
-.calendar-menu-slider a.active{
-	border-bottom: 3px solid #f2bc5c;
+.links-social a:hover{
+    opacity: 1;   
 }
 
 .calendar-step-two .icon-cerrar{
