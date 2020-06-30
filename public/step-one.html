@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" href="./img/icon.png" />
+        <title>Sanus - web de salud</title>
+        <!-- fonts -->
+        <link rel="stylesheet" href="./fonts/publicsans/publicsans.css">
+        <link rel="stylesheet" href="./fonts/icons/styles.css">
+    </head>
+    
+    <body>
+        <style>
+            body{
+            		background-color: var(--primary);
+            	}
+        </style>
+        <section class="step-one ">
+            <div class="back-step">	<a href="index.html"><span class="icon-flecha-left text-white arrow-back-step"></span></a>
+            </div>
+            <div class="aside-step-one d-none d-md-block">
+                <img src="img/sanus_blanco.svg" class="step-logo">
+                	<h5 class="h4 text-white aside-txt">Distanciamiento social</h5>
+                <img src="img/mujer.png" class="woman-step-one">
+            </div>
+            <div class="main-content-step-one">
+                <div class="row justify-content-around">
+                    <div class="col-12 col-md-4">
+                        	<h4 class="h3 text-white">Complete los siguientes campos para solicitar su turno</h4>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <form class="form-dark form-max form-content-step" action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputText1" aria-describedby="TextHelp"
+                                placeholder="Nombre completo">
+                                <label for="exampleInputText1">Nombre completo</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Apellido">
+                                <label for="exampleInputEmail1">Apellido</label>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select" id="exampleFormControlSelect1">
+                                    <option>Cobertura médica</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <label for="exampleFormControlSelect1">Example select</label>
+                            </div>
+                            <div class="pt-5 pb-5 d-md-flex flex-row justify-content-between align-items-flex-start">
+                                	<h5 class="text-white font-weight-normal">Sexo:</h5>
+                                <label class="radio-container">Masculino
+                                    <input type="radio" name="radio" checked>	<span class="radio-checkmark"></span>
+                                </label>
+                                <label class="radio-container">Femenino
+                                    <input type="radio" name="radio">	<span class="radio-checkmark"></span>
+                                </label>
+                            </div> <a href="step-two.html" class="btn btn-white btn-lg btn-sm-block">continuar <span class="icon-flecha"></span></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
