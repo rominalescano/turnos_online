@@ -1,0 +1,171 @@
+<partial src="steps-header.html"></partial>
+
+
+
+<style>
+	.content-profesional{
+		
+	}
+	.sidebar-l{		
+		height: 100%;
+		
+		border-right: solid 1px rgb(223, 223, 223);
+		padding: 34px;
+	}
+	.content-r{
+		padding: 34px;
+		
+	}
+
+	.navbar-brand{}
+	.navbar-brand img{
+		max-width: 155px;
+	}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#"><img src="img/sanus_color.svg" alt=""> </a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav ml-auto mr-md-4">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#">Iniciar sesión</a>
+		</li>
+		<li class="nav-item ml-4">
+		  <a class="nav-link" href="#">Crear cuenta</a>
+		</li>			
+	  </ul>
+	 
+	</div>
+  </nav>
+
+
+<div class="content-profesional row">
+	<div class="col-12 col-md-4">
+		<div class="sidebar-l">
+	
+			<div class="profesional d-flex flex-row justify-content-between ">
+				<div class="prof-item mt-3">
+					<h4 class="font-weight-bold h4">Dr. Matías Rojas Moya</h4>
+					
+						<div class="profesional d-flex flex-row align-items-center">
+							<div class="img-profile rounded mr-3">
+								<img src="img/1.jpg" class="profile-photo">
+							</div>
+							<div class="profesional-info pl-3">							
+								<p class="profesional-info mb-0">Médico clínico,<br> Endocrinólogo (Diabetes-<br> endocrinología adulto)</p>							
+							</div>
+							
+						</div>
+						<a class="btn btn-outline-secondary btn-block mt-4 d-block d-md-none" data-toggle="collapse" href="#more-info-collapse" role="button" aria-expanded="false" aria-controls="more-info-collapse">
+						Más información
+						  </a>
+						<div class="collapse  d-md-block" id="more-info-collapse" aria-expanded="false">
+							<div class="contact-info  mt-5">
+								<div class="share-link">
+									<h5>matiasrojas.sanusweb.com</h5>						
+								</div>
+								<div class="telefono">
+									<h5><span>Teléfono</span> 385456874</h5>
+								</div>
+								<div class="wp">
+									<a href="" class="btn btn-lg btn-outline-secondary">Enviar mensaje <i class="icon icon-whatsapp-1  ml-2"></i></a>
+								</div>
+							</div>
+							<div class="lugares-atencion mt-5">						
+								<h5 class="mb-3">Lugares de atención</h5>
+								<div class="lugar">							
+									<p class="mb-2">Sanatorio  Alberdi</p>
+									<h6>Belgrano sur 1586, Santiago capital</h6>
+								</div>
+								<div class="lugar">							
+									<p class="mb-2">Clínica Norte</p>
+									<h6>9 de Julio  sur 1586, Santiago capital</h6>
+								</div>
+		
+								<div class="social-icons d-flex ">
+									<a href="#"><i class="icon icon-facebook mr-3"></i></a>
+									<a href="#"><i class="icon icon-twitter mr-3"></i></a>
+									<a href="#"><i class="icon icon-linkedin mr-3"></i></a>
+									
+								</div>
+		
+							</div>
+						</div>
+						
+						
+					
+				</div><!-- end profile item -->
+			</div>
+		
+		</div>
+	</div>
+	<div class="col-12 col-md-8">
+		<div class="content-r">
+		
+		
+			<div class="tabs-profile mt-md-5">
+				<ul class="nav nav-tabs nav-underline nav-fill" id="myTab" role="tablist">
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#turnos" role="tab" aria-controls="turnos" aria-selected="true">Turnos</a>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link" id="contacto-tab" data-toggle="tab" href="#resumen" role="tab" aria-controls="contacto" aria-selected="false">Resumen</a>
+					</li>
+					<li class="nav-item" role="presentation">
+					  <a class="nav-link" id="resumen-tab" data-toggle="tab" href="#consultorio" role="tab" aria-controls="resumen" aria-selected="false">Consultorio</a>
+					</li>
+				  </ul>
+				  <div class="tab-content pt-5" id="myTabContent">
+					<div class="tab-pane fade show active" id="turnos" role="tabpanel" aria-labelledby="turnos-tab">
+						
+
+						<div class="row">
+							<div class="col-md-6">
+								<h5 class="h4">Calendario</h5>
+							</div>
+							<div class="col-md-6">
+								<div class="reserva-turnos mt-md-5  pb-4 pt-md-5">
+									<h4 class="title-sgt h4 mb-3 mb-md-2">Reserva de Turnos Online</h4>
+									<i class="icon-down-circle text-secondary mb-5"></i>
+									<form action="">
+									  <div class="form-group mt-5 mt-md-0">
+										<input type="text" name="dni" class="form-control form-number " placeholder="Ingrese su DNI">
+										<label for="dni">Ingrese su DNI</label>
+									  </div>
+									</form>          
+									<a href="step-one.html" class="btn btn-primary btn-block  ">Continuar <span class="icon-flecha"></span></a>
+								</div> 
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="tab-pane fade" id="resumen" role="tabpanel" aria-labelledby="resumen-tab">
+						<h4 class="profesional-info">Médico clínico,  Endocrinólogo (Diabetes  endocrinología adulto)</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, illum distinctio maiores, sunt iste a harum assumenda modi accusantium voluptate ab voluptatum tempore nesciunt ipsam alias nam nihil architecto natus, ratione numquam dolores? Error, perferendis porro. Eveniet dolor saepe veniam ipsum placeat facilis suscipit nostrum quasi ipsam aliquam, totam sed, delectus quis tempore dolore maiores nesciunt ratione nemo architecto. Illo sunt a sequi delectus nihil?</p>
+					</div>
+					<div class="tab-pane fade" id="consultorio" role="tabpanel" aria-labelledby="consultorio-tab">
+						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
+						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
+						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
+						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
+						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<partial src="footer.html"></partial>
