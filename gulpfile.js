@@ -56,7 +56,7 @@ function img() {
 }
 
 function fonts() {
-    return gulp.src('src/fonts/*/*')        
+    return gulp.src('src/fonts/*/*/*')        
         .pipe(gulp.dest('public/fonts/'));
 }
 
@@ -77,7 +77,7 @@ function watchFiles() {
     gulp.watch('src/**/*.html', gulp.series(html, browserSyncReload));
     gulp.watch('src/**/*.scss', gulp.series(css, browserSyncReload));
     gulp.watch('src/css/*.css', gulp.series(css, browserSyncReload));
-    gulp.watch('src/fonts/*', gulp.series(fonts, browserSyncReload));
+    gulp.watch('src/fonts/*/*/*', gulp.series(fonts, browserSyncReload));
     gulp.watch('src/**/*.js', gulp.series(js, browserSyncReload));
     gulp.watch('src/img/**/*.*', gulp.series(img));
     
