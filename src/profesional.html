@@ -1,9 +1,23 @@
+
+
 <partial src="steps-header.html"></partial>
 
+<style>
+	 .profile-photo{
+		object-fit: cover;
+	}
+
+	@media (min-width:768px) {
+		.content-r{
+			max-height: 30vh;
+		}
+	}
+
+	
+</style>
 
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 	<a class="navbar-brand" href="#"><img  width="120px" src="https://www.sanusweb.com/Content/Landing/img/sanus_color.svg" alt=""> </a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
@@ -11,9 +25,9 @@
   
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 	  <ul class="navbar-nav ml-auto mr-md-4">
-		<li class="nav-item active">
-		  <a class="nav-link" href="#">Iniciar sesión</a>
-		</li>
+		<li class="nav-item ml-4">
+			<a class="nav-link active " href="#">Inicio</a>
+		  </li>		
 		<li class="nav-item ml-4">
 		  <a class="nav-link" href="#">Crear cuenta</a>
 		</li>			
@@ -23,120 +37,94 @@
   </nav>
 
 
-<div class="content-profesional row">
+<div class="mt-5  pt-5 content-profesional row">
 	<div class="col-12 col-md-4">
-		<div class="sidebar-l h-100 px-2 px-md-5 pt-3 border-right">
-	
-			<div class="profesional d-flex flex-row justify-content-between ">
-				<div class="prof-item mt-3">
-					<h4 class="font-weight-bold h4">Dr. Matías Rojas Moya</h4>
-					
-						<div class="profesional d-flex flex-row align-items-center">
-							<div class="img-profile rounded mr-3">
-								<img src="img/1.jpg" class="profile-photo">
-							</div>
-							<div class="profesional-info pl-3">							
-								<p class="profesional-info mb-0">Médico clínico,<br> Endocrinólogo (Diabetes-<br> endocrinología adulto)</p>							
-							</div>
-							
-						</div>
-						<a class="btn btn-outline-secondary btn-block mt-4 d-block d-md-none" data-toggle="collapse" href="#more-info-collapse" role="button" aria-expanded="false" aria-controls="more-info-collapse">
-						Más información
-						  </a>
-						<div class="collapse  d-md-block" id="more-info-collapse" aria-expanded="false">
-							<div class="contact-info  mt-5">
-								<div class="share-link">
-									<h5>matiasrojas.sanusweb.com</h5>						
-								</div>
-								<div class="telefono">
-									<h5><span>Teléfono</span> 385456874</h5>
-								</div>
-								<div class="wp">
-									<a href="" class="btn btn-lg btn-outline-secondary">Enviar mensaje <i class="icon icon-whatsapp-1  ml-2"></i></a>
-								</div>
-							</div>
-							<div class="lugares-atencion mt-5">						
-								<h5 class="mb-3">Lugares de atención</h5>
-								<div class="lugar">							
-									<p class="mb-2">Sanatorio  Alberdi</p>
-									<h6>Belgrano sur 1586, Santiago capital</h6>
-								</div>
-								<div class="lugar">							
-									<p class="mb-2">Clínica Norte</p>
-									<h6>9 de Julio  sur 1586, Santiago capital</h6>
-								</div>
-		
-								<div class="social-icons d-flex ">
-									<a href="#"><i class="icon icon-facebook mr-3"></i></a>
-									<a href="#"><i class="icon icon-twitter mr-3"></i></a>
-									<a href="#"><i class="icon icon-linkedin mr-3"></i></a>
-									
-								</div>
-		
-							</div>
-						</div>
-						
-						
-					
-				</div><!-- end profile item -->
+		<div class="sidebar-l px-2 px-md-5 pt-3 border-right">
+			<div class="share-link">
+				<div class="pl-3 d-flex align-items-center justify-content-center">
+					<p id="linksanus" class="mb-0 mr-2" >matiasrojas.sanusweb.com</p>										
+					<button type="button" class="btn btn-sm btn-light btn-clipboard l-1 px-3 py-2 mt-0" data-clipboard-action="copy" data-clipboard-target="#linksanus"><i class="icon icon-link"></i></button>  					   
+				</div>			
 			</div>
-		
+			<hr>	
+			<div class="profesional d-flex flex-row justify-content-between ">
+				<div class="prof-item mt-3">	
+						<div class="profesional d-flex flex-row align-items-center">							
+							<img src="img/1987.jpg" onerror="this.src='https://www.sanusweb.com/Content/Prestadores/default.png'" class="profile-photo">							
+							<div class="profesional-info pl-2">			
+								<h4 class="font-weight-bold h4 mb-2">Dr. Matías Rojas Moya</h4>				
+								<p class="profesional-info mb-0">Médico clínico,Endocrinólogo (Diabetes- endocrinología adulto)</p>							
+							</div>
+						</div>	
+				</div><!-- end profile item -->
+			</div>		
 		</div>
 	</div>
 	<div class="col-12 col-md-8">
-		<div class="content-r px-2 px-md-5 pt-3">
+		<div class="content-r px-4 px-md-4 pt-3">
 		
-		
-			<div class="tabs-profile mt-md-5">
-				<ul class="nav nav-tabs nav-underline nav-fill" id="myTab" role="tablist">
-					<li class="nav-item" role="presentation">
-					  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#turnos" role="tab" aria-controls="turnos" aria-selected="true">Turnos</a>
-					</li>
-					<li class="nav-item" role="presentation">
-					  <a class="nav-link" id="contacto-tab" data-toggle="tab" href="#resumen" role="tab" aria-controls="contacto" aria-selected="false">Resumen</a>
-					</li>
-					<li class="nav-item" role="presentation">
-					  <a class="nav-link" id="resumen-tab" data-toggle="tab" href="#consultorio" role="tab" aria-controls="resumen" aria-selected="false">Consultorio</a>
-					</li>
-				  </ul>
-				  <div class="tab-content pt-5" id="myTabContent">
-					<div class="tab-pane fade show active" id="turnos" role="tabpanel" aria-labelledby="turnos-tab">
-						
-
-						<div class="row">
-							<div class="col-md-6">
-								<h5 class="h4">Calendario</h5>
-							</div>
-							<div class="col-md-6">
-								<div class="reserva-turnos mt-md-5  pb-4 pt-md-5">
-									<h4 class="title-sgt h4 mb-3 mb-md-2">Reserva de Turnos Online</h4>
-									<i class="icon-down-circle text-secondary mb-5"></i>
-									<form action="">
-									  <div class="form-group mt-5 mt-md-0">
-										<input type="text" name="dni" class="form-control form-number " placeholder="Ingrese su DNI">
-										<label for="dni">Ingrese su DNI</label>
-									  </div>
-									</form>          
-									<a href="step-one.html" class="btn btn-primary btn-block  ">Continuar <span class="icon-flecha"></span></a>
-								</div> 
-							</div>
+			<ul class="nav nav-tabs  d-md-none nav-underline nav-fill mb-3">
+				<li class="nav-item">
+				  <a class="nav-link active" href="#">Turnos</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#contact-info">Más info</a>
+				</li>
+			
+			  </ul>
+			  
+			<div class="filter-prof mt-3  mb-4">				
+				<div class="card bg-light">
+					<div class="card-body">
+						<h5 class="mb-1">Lugar de atención </h5> 
+						<div class="form-group mb-0 pb-0"> 							
+							<select name="Ejemplo" class="form-control  " id="">
+								<option value="Primer">Clínica Yunes</option>
+								<option value="Segundo">Segundo</option>
+							</select>							          
 						</div>
-						
 					</div>
-					
-					<div class="tab-pane fade" id="resumen" role="tabpanel" aria-labelledby="resumen-tab">
-						<h4 class="profesional-info">Médico clínico,  Endocrinólogo (Diabetes  endocrinología adulto)</h4>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, illum distinctio maiores, sunt iste a harum assumenda modi accusantium voluptate ab voluptatum tempore nesciunt ipsam alias nam nihil architecto natus, ratione numquam dolores? Error, perferendis porro. Eveniet dolor saepe veniam ipsum placeat facilis suscipit nostrum quasi ipsam aliquam, totam sed, delectus quis tempore dolore maiores nesciunt ratione nemo architecto. Illo sunt a sequi delectus nihil?</p>
-					</div>
-					<div class="tab-pane fade" id="consultorio" role="tabpanel" aria-labelledby="consultorio-tab">
-						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
-						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
-						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
-						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
-						<img class="w-100 mb-2" src="http://via.placeholder.com/640x360" alt="">
-					</div>
-				  </div>
+													
+				</div>											
 			</div>
+
+			<h4 class="mb-2">Solicitar turno</h4>
+
+			<div class="turnos-disponibles">
+				<img class="w-100" src="img/turnos-screen.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-4">
+		<div class="sidebar-l px-3 px-md-5 pt-3 border-right">
+			<div id="contact-info" class="contact-info  mt-5  pb-5">
+				<div class="resume-prof mt-3">
+					<h5 class=" badge badge-secondary">Resumen</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis veniam perferendis quisquam. Officia expedita harum molestiae magni fugit impedit, sit necessitatibus perferendis nobis consequuntur vitae, labore et illo?</p>
+				</div>				
+				<div class="telefono mt-3">
+					<h5 class=" badge badge-secondary">Teléfonos</h5>
+					<ul class="pl-3">
+						<li>0385 476-6107</li>
+						<li>0385 421-1741</li>												
+					</ul>
+				</div>
+				<div class="wp">
+					<a href="tel:+54-385-476-6107" class="btn btn-lg btn-outline-primary">Llamar <i class="icon icon-phone  ml-2"></i></a>
+				</div>
+				<hr>
+				<h5 class="mb-3   badge badge-secondary">Redes</h5>
+				<div class="social-icons d-flex ">
+					<a href="#"><i class="icon icon-facebook mr-3"></i></a>
+					<a href="#"><i class="icon icon-twitter mr-3"></i></a>
+					<a href="#"><i class="icon icon-linkedin mr-3"></i></a>					
+				</div>
+				<hr>
+				<h5 class="mb-3   badge badge-secondary">Sitio web</h5>
+				<br>
+				<a class="text-primary" href="#">https://matiasmoya.com/</a>
+			</div>
+
 		</div>
 	</div>
 </div>
@@ -145,7 +133,15 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script>
+	$( document ).ready(function() {
 
+new ClipboardJS('.btn-clipboard');
 
+});
+</script>
 
 <partial src="footer.html"></partial>
+
